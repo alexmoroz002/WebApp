@@ -33,7 +33,7 @@
     display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .ham-button {
         display: flex;
     }

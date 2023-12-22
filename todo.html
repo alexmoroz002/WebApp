@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="css/outlines.css">
+    <script src="js/pageLoad.js"></script>
+    <title>To Do - SoundStats</title>
+</head>
+
+<body class="page page_header_fixed">
+<header class="header page__header header_fixed">
+    <a href="index.html" class="logo">
+        <img src="images/logo.svg" alt="" class="logo__icon">
+        <h2 class="logo__name">SoundStats</h2>
+    </a>
+    <nav class="nav-menu">
+        <ul class="menu">
+            <li class="nav-menu__item">
+                <a href="statistics.html" class="nav-button menu__nav-button">
+                    <span class="nav-button__text">Статистика</span>
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="playlists.html" class="nav-button menu__nav-button">
+                    <span class="nav-button__text">Плейлисты</span>
+                </a>
+            </li>
+            <li class="nav-menu__item">
+                <a href="todo.html" class="nav-button menu__nav-button">
+                    <span class="nav-button__text">To do</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <a href="#" class="button button_primary button_iconed">
+        <img src="images/spotify_icon_alt.svg" alt="" class="button__icon">
+        <span class="button__text">Войти через Spotify</span>
+    </a>
+    <input type="checkbox" id="ham-toggle">
+    <label class="ham-button" for="ham-toggle">
+        <span></span>
+    </label>
+    <nav class="ham-menu">
+        <ul class="menu">
+            <li class="ham-menu__item">
+                <a href="#" class="ham-menu__link">Войти</a>
+            </li>
+            <li class="ham-menu__item">
+                <a href="index.html" class="ham-menu__link">Главная</a>
+            </li>
+            <li class="ham-menu__item">
+                <a href="statistics.html" class="ham-menu__link">Статистика</a>
+            </li>
+            <li class="ham-menu__item">
+                <a href="playlists.html" class="ham-menu__link">Плейлисты</a>
+            </li>
+            <li class="ham-menu__item">
+                <a href="todo.html" class="ham-menu__link">To do</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main">
+    <div class="main__inner">
+        <h1 class="page-desc__header">
+            Todo-список
+        </h1>
+        <div class="page-desc__text">
+            На данной странице вы можете написать ваши пожелания по работе сайта. Или просто использовать
+            как личный список задач, ведь эти пожелания все равно никуда не отправляются
+        </div>
+        <article class="flex-list">
+            <h2 class="flex-list__header">Задачи</h2>
+            <section class="flex-list__item task">
+                <label for="taskInput" style="position: absolute"></label>
+                <input class="task__text task__input" type="text" id="taskInput" placeholder="Добавить задачу">
+                <button class="button button_primary button_small" onclick="addTask()">Добавить</button>
+                <button class="button button_small button_primary" onclick="clearAllTasks()">Очистить все</button>
+            </section>
+
+            <ul class="flex-list" id="todoList"></ul>
+        </article>
+    </div>
+</main>
+
+<footer class="footer page__footer">
+    <div class="footer__info">
+        Создано (будет) с использованием <a href="https://developer.spotify.com/documentation/web-api" class="link">Spotify API</a><br>
+        Данное приложение никак не связано с компанией Spotify AB или её партнерами <br> <br>
+        <div class="footer__load-time">
+            Время загрузки страницы: <span id="load-time"></span>мс
+        </div>
+    </div>
+    <div class="footer__ascii">
+            <pre>
+      |\      _,,,---,,_
+ZZZzz /,`.-'`'    -.  ;-;;,_
+     |,4-  ) )-,_. ,\ (  `'-'
+    '---''(_/--'  `-'\_)</pre>
+    </div>
+</footer>
+
+</body>
+<script src="js/todo.js"></script>
+</html>
