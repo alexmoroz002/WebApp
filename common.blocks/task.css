@@ -1,0 +1,25 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1vw;
+    align-items: center;
+}
+
+.task__text {
+    flex-grow: 1;
+    overflow-wrap: anywhere;
+}
+
+.task__input {
+    background-color: color-mix(in srgb, var(--secondary) 30%, var(--background));
+    border: none;
+    border-radius: 3px;
+    border-bottom: 2px solid var(--accent);
+    padding: 3px 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .task {
+        flex-direction: row;
+    }
+}

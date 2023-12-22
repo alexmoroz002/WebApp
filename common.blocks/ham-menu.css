@@ -39,7 +39,7 @@
     padding: 8px 0;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     #ham-toggle:checked ~ .ham-menu {
         visibility: visible;
         right: 0;
